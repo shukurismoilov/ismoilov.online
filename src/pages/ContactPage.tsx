@@ -17,7 +17,7 @@ function ContactPageContent() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Compose mailto link
-    const mailtoLink = `mailto:ismoilovshakhzod00@gmail.com?subject=${encodeURIComponent(form.subject || 'New inquiry')}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+    const mailtoLink = `mailto:shukurismoilovdev@gmail.com?subject=${encodeURIComponent(form.subject || 'New inquiry')}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
     window.location.href = mailtoLink;
     setSubmitted(true);
   };
@@ -62,15 +62,15 @@ function ContactPageContent() {
               {
                 icon: Mail,
                 label: 'Email',
-                value: 'ismoilovshakhzod00@gmail.com',
-                href: 'mailto:ismoilovshakhzod00@gmail.com',
+                value: 'shukurismoilovdev@gmail.com',
+                href: 'mailto:shukurismoilovdev@gmail.com',
                 sub: lang === 'en' ? 'Reply within 24h' : 'Ответ в течение 24ч',
               },
               {
                 icon: MessageCircle,
                 label: 'Telegram',
-                value: '@ismoilov_online',
-                href: 'https://t.me/ismoilov_online',
+                value: '@shukurismoilov',
+                href: 'https://t.me/shukurismoilov',
                 sub: lang === 'en' ? 'Fastest response' : 'Самый быстрый ответ',
               },
               {

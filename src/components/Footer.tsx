@@ -41,9 +41,9 @@ export default function Footer() {
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground mb-4">Connect</div>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-              <a href="https://t.me/ismoilov_online" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Telegram</a>
-              <a href="mailto:ismoilovshakhzod00@gmail.com" className="hover:text-primary transition-colors">Email</a>
-              <a href="https://github.com/ismoilov" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+              <a href="https://t.me/shukurismoilov" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Telegram</a>
+              <a href="mailto:shukurismoilovdev@gmail.com" className="hover:text-primary transition-colors">Email</a>
+              <a href="https://github.com/shukurismoilov" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
             </div>
           </div>
         </div>

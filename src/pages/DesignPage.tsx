@@ -164,7 +164,7 @@ function DesignPageContent() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const body = `Name: ${form.name}\nEmail: ${form.email}\nService: ${form.service}\n\n${form.brief}`;
-    window.location.href = `mailto:ismoilovshakhzod00@gmail.com?subject=${encodeURIComponent(`Design Brief — ${form.service || 'New Project'}`)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:shukurismoilovdev@gmail.com?subject=${encodeURIComponent(`Design Brief — ${form.service || 'New Project'}`)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 
