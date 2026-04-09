@@ -107,7 +107,7 @@ export const translations = {
       stats: [
         { value: '5+', label: 'Years Teaching' },
         { value: '10+', label: 'Products Shipped' },
-        { value: '200+', label: 'Students' },
+        { value: '500+', label: 'Students' },
         { value: '3', label: 'Disciplines' },
       ],
     },
@@ -227,7 +227,7 @@ export const translations = {
       stats: [
         { value: '5+', label: 'Лет преподавания' },
         { value: '10+', label: 'Запущенных продуктов' },
-        { value: '200+', label: 'Студентов' },
+        { value: '500+', label: 'Студентов' },
         { value: '3', label: 'Дисциплины' },
       ],
     },

@@ -216,13 +216,13 @@ function AcademyPageContent() {
               ? [
                   { icon: Star, label: 'Mentor-led', desc: 'Real 1-on-1 guidance, not pre-recorded videos.' },
                   { icon: Code2, label: 'Project-based', desc: 'Build real things from day one.' },
-                  { icon: Users, label: '200+ Alumni', desc: 'A network that helps you land jobs.' },
+                  { icon: Users, label: '500+ Alumni', desc: 'A network that helps you land jobs.' },
                   { icon: CheckCircle2, label: 'Proven Results', desc: 'Students placed at top companies.' },
                 ]
               : [
                   { icon: Star, label: 'С наставником', desc: 'Личное сопровождение, не просто видео.' },
                   { icon: Code2, label: 'На практике', desc: 'Строите реальные проекты с первого дня.' },
-                  { icon: Users, label: '200+ выпускников', desc: 'Сеть для поиска работы и роста.' },
+                  { icon: Users, label: '500+ выпускников', desc: 'Сеть для поиска работы и роста.' },
                   { icon: CheckCircle2, label: 'Результат', desc: 'Студенты в ведущих компаниях.' },
                 ]
             ).map((item, i) => (
