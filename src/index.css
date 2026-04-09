@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   ISMOILOV.ONLINE — LIQUID GLASS DESIGN SYSTEM
+   All colors in HSL. No ad-hoc color classes.
+   ============================================ */
+
+@layer base {
+  :root {
+    /* Core palette */
+    --background: 220 20% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 0 0% 93%;
+
+    --popover: 220 20% 7%;
+    --popover-foreground: 0 0% 93%;
+
+    /* Neon Orange — brand accent */
+    --primary: 22 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 22 100% 60%;
+    --primary-dim: 22 100% 40%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 220 15% 14%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 22 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 12%;
+    --ring: 22 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Glass */
+    --glass-bg: hsla(220, 20%, 10%, 0.6);
+    --glass-border: hsla(0, 0%, 100%, 0.07);
+    --glass-shine: hsla(0, 0%, 100%, 0.04);
+
+    /* Glow effects */
+    --glow-orange: 0 0 60px hsla(22, 100%, 50%, 0.25);
+    --glow-orange-sm: 0 0 20px hsla(22, 100%, 50%, 0.35);
+    --glow-orange-line: 0 0 1px hsla(22, 100%, 60%, 0.9), 0 0 15px hsla(22, 100%, 50%, 0.4);
+
+    /* Typography */
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    /* Gradients */
+    --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, hsla(22, 100%, 50%, 0.12) 0%, transparent 70%);
+    --gradient-glass: linear-gradient(135deg, hsla(0,0%,100%,0.06) 0%, hsla(0,0%,100%,0.01) 100%);
+    --gradient-orange: linear-gradient(135deg, hsl(22, 100%, 50%), hsl(15, 100%, 45%));
+    --gradient-section: linear-gradient(180deg, transparent 0%, hsla(22, 100%, 50%, 0.04) 50%, transparent 100%);
+
+    /* Sidebar (unused but required by shadcn) */
+    --sidebar-background: 220 20% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 22 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 220 15% 14%;
+    --sidebar-ring: 22 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  /* Glass card */
+  .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-image: var(--gradient-glass);
+  }
+
+  /* Orange glow line */
+  .glow-line {
+    box-shadow: var(--glow-orange-line);
+  }
+
+  /* Neon text */
+  .neon-text {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 20px hsla(22, 100%, 55%, 0.6);
+  }
+
+  /* Accent gradient text */
+  .gradient-text {
+    background: var(--gradient-orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Angular corner clip */
+  .clip-angular {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+
+  /* Bottom-left clip */
+  .clip-angular-bl {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  }
+
+  /* Scan line overlay */
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsla(0, 0%, 0%, 0.03) 2px,
+      hsla(0, 0%, 0%, 0.03) 4px
+    );
+    pointer-events: none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary)); border-radius: 2px; }
